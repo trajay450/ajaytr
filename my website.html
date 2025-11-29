@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thakur Ajay Kumar | PhD Researcher</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ========== RESET & GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #050816;
+    color: #e5e7eb;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== LAYOUT WRAPPER ========== */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+.navbar .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    font-size: 14px;
+    color: #e5e7eb;
+    position: relative;
+    padding-bottom: 4px;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    transition: width 0.25s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0 60px;
+}
+.hero-left {
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: center;
+}
+.hero-photo-wrapper {
+    background: radial-gradient(circle at top left, #1d4ed8, #020617);
+    padding: 6px;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+    max-width: 360px;
+}
+.hero-photo-wrapper img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Hero text */
+.hero-right {
+    flex: 1 1 360px;
+}
+.hero-kicker {
+    font-size: 16px;
+    color: #93c5fd;
+    margin-bottom: 8px;
+}
+
+/* ===== FLOATING TITLE ANIMATION ===== */
+.floating-title {
+    animation: float 3.5s ease-in-out infinite;
+}
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.hero-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #60a5fa;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+.hero-text {
+    font-size: 14px;
+    color: #cbd5f5;
+    max-width: 480px;
+    margin-bottom: 24px;
+}
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.btn-primary,
+.btn-outline {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-primary {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #3b82f6;
+}
+.btn-primary:hover {
+    background: #2563eb;
+}
+.btn-outline {
+    background: transparent;
+    color: #e5e7eb;
+    border-color: #4b5563;
+}
+.btn-outline:hover {
+    border-color: #9ca3af;
+}
+
+/* ========== SECTIONS BELOW HERO ========== */
+.section {
+    margin-top: 40px;
+}
+.section-card {
+    background: #020617;
+    border-radius: 16px;
+    padding: 24px 22px 20px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    border: 1px solid #111827;
+}
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 6px;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+.section-text {
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+/* Lists */
+.section ul {
+    list-style: none;
+    margin-top: 8px;
+}
+.section ul li {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+.section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: #60a5fa;
+}
+
+/* ===== EDUCATION TIMELINE ===== */
+.timeline {
+    margin-top: 10px;
+    position: relative;
+    padding-left: 28px;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(#3b82f6, #06b6d4);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #f3f4f6;
+    padding-left: 8px;
+    line-height: 1.45;
+}
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.22);
+}
+
+/* Publications */
+.publication {
+    background: #020617;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #1f2933;
+    font-size: 13px;
+    color: #e5e7eb;
+}
+.publication-title {
+    font-weight: 600;
+    color: #93c5fd;
+}
+.publication-venue {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 30px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .hero-right {
+        text-align: left;
+    }
+}
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .nav-links {
+        gap: 14px;
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Thakur Ajay Kumar</div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#publications" class="nav-link">Publications</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-left">
+            <div class="hero-photo-wrapper">
+                <img src="ajay.jpg" alt="Thakur Ajay Kumar">
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-kicker">I am a</div>
+            <!-- FLOATING ANIMATION APPLIED HERE -->
+            <h1 class="hero-title floating-title">PhD Researcher in AI &amp; Big Data</h1>
+            <div class="hero-name">THAKUR AJAY KUMAR</div>
+            <p class="hero-text">
+                A researcher specializing in Artificial Intelligence, Big Data, and medical applications. 
+                My work focuses on deep learning for medical imaging, predictive healthcare analytics, 
+                and building intelligent decision-support systems for clinicians.
+            </p>
+            <div class="hero-buttons">
+                <a href="resume.pdf" target="_blank" class="btn-primary">Download CV</a>
+                <a href="https://scholar.google.com/citations?hl=en&user=CmU6KS8AAAAJ" target="_blank" class="btn-outline">Google Scholar</a>
+                <a href="mailto:trajaj450@gmail.com" class="btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="section-card">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">
+                I am a researcher specializing in Artificial Intelligence and Big Data with a strong interest 
+                in medical applications. I hold a Bachelor's in Computer Engineering and a Master's in Smart 
+                Convergence. I am currently pursuing my PhD with research focused on deep learning, medical 
+                imaging, and predictive healthcare analytics.
+            </p>
+        </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+        <div class="section-card">
+            <h2 class="section-title">Research Interests</h2>
+            <ul>
+                <li>Deep Learning (CNN, DNN, Explainable AI)</li>
+                <li>Medical Image Analysis</li>
+                <li>AI for Predictive Healthcare</li>
+                <li>Big Data Systems &amp; Pipelines</li>
+                <li>Clinical Decision Support Systems</li>
+                <li>Machine Learning for Healthcare</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+        <div class="section-card">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">PhD (Ongoing) – AI &amp; Big Data</div>
+                <div class="timeline-item">M.Sc. – Smart Convergence</div>
+                <div class="timeline-item">Bachelor – Computer Engineering</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+        <div class="section-card">
+            <h2 class="section-title">Selected Publications</h2>
+
+            <div class="publication">
+                <div class="publication-title">
+                    Deep Neural Network for Lung Cancer Detection (2023)
+                </div>
+                <div class="publication-venue">
+                    International Conference on Smart Computing and Cyber Security
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">
+                    CNN Model for Gallstone Detection (2025)
+                </div>
+                <div class="publication-venue">
+                    International Conference on Smart Computing and Cyber Security
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © <span id="year"></span> Thakur Ajay Kumar · All rights reserved.
+    </footer>
+
+</div>
+
+<script>
+// Animate education timeline on scroll
+const timelineItems = document.querySelectorAll('.timeline-item');
+const timelineObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.4 });
+timelineItems.forEach(item => timelineObserver.observe(item));
+
+// Navbar active link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (entry.isIntersecting && link) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+    });
+}, { threshold: 0.55 });
+sections.forEach(sec => navObserver.observe(sec));
+
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

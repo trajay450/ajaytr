@@ -263,6 +263,51 @@ a {
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.22);
 }
 
+/* ========== TRADING SECTION ========== */
+.trading-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 12px;
+}
+.trading-col {
+    flex: 1 1 220px;
+}
+.trading-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #bfdbfe;
+}
+.trading-notes {
+    margin-top: 10px;
+}
+.trading-notes ul li::before {
+    color: #facc15;
+}
+
+/* TradingView button */
+.btn-trading {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #facc15;
+    color: #fef9c3;
+    background: linear-gradient(90deg, #f59e0b, #b45309);
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.btn-trading:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.55);
+    filter: brightness(1.05);
+}
+
 /* Publications */
 .publication {
     background: #020617;
@@ -327,6 +372,7 @@ a {
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#research" class="nav-link">Research</a>
+            <a href="#trading" class="nav-link">Trading</a>
             <a href="#education" class="nav-link">Education</a>
             <a href="#publications" class="nav-link">Publications</a>
         </nav>
@@ -382,6 +428,55 @@ a {
                 <li>Clinical Decision Support Systems</li>
                 <li>Machine Learning for Healthcare</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- TRADING & TECHNICAL ANALYSIS -->
+    <section id="trading" class="section">
+        <div class="section-card">
+            <h2 class="section-title">Forex Trading &amp; Technical Analysis</h2>
+            <p class="section-text">
+                In addition to my academic research, I am an active Forex trader focusing on technical analysis and 
+                price-action-based strategies. I regularly publish trading ideas and market insights on TradingView, 
+                covering major currency pairs, indices, and gold (XAUUSD). My analysis emphasizes market structure, 
+                liquidity, and high-probability setups aligned with risk management principles.
+            </p>
+
+            <div class="trading-layout">
+                <div class="trading-col">
+                    <div class="trading-subtitle">Markets I Focus On</div>
+                    <ul>
+                        <li>Major Forex pairs (EURUSD, GBPUSD, USDJPY)</li>
+                        <li>Gold (XAUUSD)</li>
+                        <li>Indices and selected crypto pairs</li>
+                    </ul>
+                </div>
+                <div class="trading-col">
+                    <div class="trading-subtitle">Core Trading Skills</div>
+                    <ul>
+                        <li>Technical analysis &amp; price action</li>
+                        <li>Support/Resistance &amp; Supply/Demand zones</li>
+                        <li>Market structure, BOS &amp; MSS</li>
+                        <li>Liquidity concepts &amp; smart money ideas</li>
+                        <li>Risk management &amp; position sizing</li>
+                        <li>TradingView charting &amp; analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="trading-notes">
+                <div class="trading-subtitle">Trading Style &amp; Strategy</div>
+                <ul>
+                    <li>Combining multi-timeframe analysis for confluence-based entries.</li>
+                    <li>Using key levels, order blocks, and liquidity zones to define trade ideas.</li>
+                    <li>Prioritizing asymmetric risk-to-reward setups over frequent trading.</li>
+                    <li>Documenting and sharing analysis on TradingView for transparency and education.</li>
+                </ul>
+            </div>
+
+            <a href="https://www.tradingview.com/u/AzayTr/" target="_blank" class="btn-trading">
+                View My TradingView Profile
+            </a>
         </div>
     </section>
 
